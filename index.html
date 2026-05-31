@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>복불복 게임 - 지원 | Random Game - Support</title>
+<meta name="description" content="복불복 게임(Random Game) 공식 지원 페이지. 룰렛 돌리기, 보석찾기, 사다리 타기 미니게임 모음." />
+<style>
+  :root {
+    --primary: #F5B731;
+    --primary-dark: #D69B1F;
+    --text: #2C2C2C;
+    --text-muted: #6B6B6B;
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E5E5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  header {
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22%;
+    background: var(--primary);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 15px;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .lang-toggle button {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.15s ease;
+  }
+  .lang-toggle button.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  section { margin: 32px 0; }
+  h2 {
+    font-size: 20px;
+    margin: 32px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+  h3 {
+    font-size: 16px;
+    margin: 20px 0 4px;
+    color: var(--text);
+  }
+  p { margin: 8px 0; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  .games {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .game-card .emoji { font-size: 24px; margin-right: 8px; }
+  .game-card .name { font-weight: 600; }
+  .game-card .desc { color: var(--text-muted); font-size: 14px; margin: 4px 0 0; }
+  .faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px 0;
+  }
+  .faq-q { font-weight: 600; margin: 0; }
+  .faq-a { color: var(--text-muted); margin: 6px 0 0; font-size: 15px; }
+  .contact-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .contact-box a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+  }
+  .contact-box a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 48px;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  [data-lang] { display: none; }
+  [data-lang].show { display: block; }
+  @media (min-width: 600px) {
+    .games { grid-template-columns: 1fr 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="app-icon">💎</div>
+    <h1>복불복 게임</h1>
+    <p class="subtitle">Random Game</p>
+    <div class="lang-toggle" role="tablist" aria-label="언어 선택">
+      <button id="btn-ko" class="active" onclick="setLang('ko')" type="button">한국어</button>
+      <button id="btn-en" onclick="setLang('en')" type="button">English</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ============ 한국어 ============ -->
+    <div data-lang="ko" class="show">
+      <section>
+        <h2>📱 앱 소개</h2>
+        <p>친구·가족·동료와 즐겁게 결정을 내릴 수 있도록 도와주는 미니게임 모음 앱입니다. 회원가입 없이 바로 사용하실 수 있습니다.</p>
+        <div class="games">
+          <div class="game-card">
+            <div><span class="emoji">🎯</span><span class="name">룰렛 돌리기</span></div>
+            <p class="desc">최대 12개 항목을 자유롭게 추가해 화려한 룰렛을 돌려보세요.</p>
+          </div>
+          <div class="game-card">
+            <div><span class="emoji">💎</span><span class="name">보석찾기</span></div>
+            <p class="desc">30장의 카드에서 보석을 찾고 폭탄을 피하세요.</p>
+          </div>
+          <div class="game-card">
+            <div><span class="emoji">🪜</span><span class="name">사다리 타기</span></div>
+            <p class="desc">최대 8명까지 참여하는 디지털 사다리 게임.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>❓ 자주 묻는 질문</h2>
+
+        <div class="faq-item">
+          <p class="faq-q">광고를 제거할 수 있나요?</p>
+          <p class="faq-a">현재 광고 제거 옵션은 제공되지 않습니다. 광고 수익은 앱 유지 및 업데이트에 사용됩니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">게임 결과는 어떻게 결정되나요?</p>
+          <p class="faq-a">모든 게임은 디바이스 내 난수 생성기를 통해 공정하게 결정됩니다. 외부 서버나 조작은 없습니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">인터넷 연결이 필요한가요?</p>
+          <p class="faq-a">게임 기능은 오프라인에서도 동작합니다. 단, 광고 표시를 위해서는 인터넷 연결이 필요합니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">앱 추적 허용 요청이 떠요. 거부해도 되나요?</p>
+          <p class="faq-a">네, 거부하셔도 모든 게임 기능을 정상적으로 이용하실 수 있습니다. 거부 시 비개인화 광고가 표시됩니다.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">광고가 화면을 가려요.</p>
+          <p class="faq-a">배너 광고는 화면 하단에 배치되어 게임 영역을 가리지 않도록 설계되어 있습니다. 화면 문제가 있다면 아래 이메일로 기기 정보와 함께 신고 부탁드립니다.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>📧 문의</h2>
+        <div class="contact-box">
+          <p>문제 신고·기능 제안·기타 문의:</p>
+          <p><a href="mailto:support@example.com">support@example.com</a></p>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">
+            기기 정보(iPhone 15 Pro 등), iOS 버전, 앱 버전, 발생 상황을 함께 보내주시면 빠른 답변에 도움이 됩니다.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ English ============ -->
+    <div data-lang="en">
+      <section>
+        <h2>📱 About</h2>
+        <p>A fun mini-game collection that helps friends, family, and coworkers make decisions together. No sign-up required.</p>
+        <div class="games">
+          <div class="game-card">
+            <div><span class="emoji">🎯</span><span class="name">Roulette</span></div>
+            <p class="desc">Spin a custom wheel with up to 12 items.</p>
+          </div>
+          <div class="game-card">
+            <div><span class="emoji">💎</span><span class="name">Gem Hunt</span></div>
+            <p class="desc">Find hidden gems among 30 cards while avoiding bombs.</p>
+          </div>
+          <div class="game-card">
+            <div><span class="emoji">🪜</span><span class="name">Ladder Game</span></div>
+            <p class="desc">A digital twist on the classic ladder game for up to 8 players.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>❓ Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <p class="faq-q">Can I remove the ads?</p>
+          <p class="faq-a">There is currently no option to remove ads. Ad revenue supports app maintenance and future updates.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">How are game results decided?</p>
+          <p class="faq-a">All games use a random number generator on your device. Results are completely fair and cannot be manipulated.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">Do I need an internet connection?</p>
+          <p class="faq-a">The games themselves work offline. An internet connection is required only to display ads.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">The app asked for tracking permission. Can I decline?</p>
+          <p class="faq-a">Yes. Declining does not affect any game features. You will simply see non-personalized ads.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">The ads are blocking the screen.</p>
+          <p class="faq-a">Banner ads are placed at the bottom of the screen and should not interfere with gameplay. If you encounter a layout issue, please report it via the email below with your device details.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>📧 Contact</h2>
+        <div class="contact-box">
+          <p>For bug reports, feature requests, or general inquiries:</p>
+          <p><a href="mailto:support@example.com">support@example.com</a></p>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 12px;">
+            Please include device model (e.g., iPhone 15 Pro), iOS version, app version, and a description of the issue for a faster response.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="./privacy.html">개인정보 처리방침 / Privacy Policy</a>
+    </p>
+    <p>© 2026 ilho Park. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      let lang;
+      if (saved === 'ko' || saved === 'en') {
+        lang = saved;
+      } else {
+        lang = (navigator.language || 'ko').toLowerCase().startsWith('ko') ? 'ko' : 'en';
+      }
+      if (lang === 'en') setLang('en');
+    })();
+  </script>
+</body>
+</html>

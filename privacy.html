@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>개인정보 처리방침 | 복불복 게임 (Random Game)</title>
+<meta name="description" content="복불복 게임(Random Game) 앱의 개인정보 처리방침. Privacy Policy for Random Game." />
+<style>
+  :root {
+    --primary: #F5B731;
+    --primary-dark: #D69B1F;
+    --text: #2C2C2C;
+    --text-muted: #6B6B6B;
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E5E5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  header {
+    text-align: center;
+    padding: 40px 24px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .updated {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0;
+  }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .lang-toggle button {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.15s ease;
+  }
+  .lang-toggle button.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .nav-back {
+    text-align: center;
+    margin: 16px 0;
+  }
+  .nav-back a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .nav-back a:hover { text-decoration: underline; }
+  h2 {
+    font-size: 18px;
+    margin: 32px 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 20px 0 4px;
+    color: var(--text);
+  }
+  p { margin: 8px 0; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+    background: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: #F0F0F0;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  a { color: var(--primary-dark); }
+  footer {
+    margin-top: 48px;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  [data-lang] { display: none; }
+  [data-lang].show { display: block; }
+</style>
+</head>
+<body>
+  <header>
+    <h1 data-lang="ko" class="show">개인정보 처리방침</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <p class="updated" data-lang="ko">최종 업데이트: 2026년 5월 31일</p>
+    <p class="updated" data-lang="en">Last updated: May 31, 2026</p>
+    <div class="lang-toggle" role="tablist" aria-label="언어 선택">
+      <button id="btn-ko" class="active" onclick="setLang('ko')" type="button">한국어</button>
+      <button id="btn-en" onclick="setLang('en')" type="button">English</button>
+    </div>
+    <div class="nav-back">
+      <a href="./index.html">← 지원 페이지 / Back to Support</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ============ 한국어 ============ -->
+    <div data-lang="ko" class="show">
+      <p>복불복 게임(이하 "본 앱")은 사용자의 개인정보를 소중하게 다루며, 본 처리방침을 통해 수집하는 정보와 그 사용 목적을 투명하게 안내합니다.</p>
+
+      <h2>1. 수집하는 정보</h2>
+      <p>본 앱은 사용자의 <strong>이름, 이메일, 전화번호 등 개인 식별 정보를 직접 수집하지 않습니다.</strong> 단, 다음과 같은 정보가 제3자 서비스(Google AdMob, Firebase)를 통해 자동으로 수집될 수 있습니다.</p>
+
+      <h3>1-1. Google AdMob (광고 서비스)</h3>
+      <ul>
+        <li>광고 식별자(IDFA) — 사용자가 앱 추적 권한을 허용한 경우에만</li>
+        <li>기기 모델, OS 버전, 화면 크기 등 일반 디바이스 정보</li>
+        <li>IP 주소 기반의 대략적인 위치 (국가/지역 수준)</li>
+        <li>광고 노출 및 클릭 데이터</li>
+      </ul>
+
+      <h3>1-2. Firebase Crashlytics (앱 안정성)</h3>
+      <ul>
+        <li>앱 충돌(crash) 발생 시 스택 트레이스 및 오류 로그</li>
+        <li>기기 모델, OS 버전, 앱 버전</li>
+        <li>익명 설치 ID</li>
+      </ul>
+
+      <h2>2. 정보 수집 및 사용 목적</h2>
+      <table>
+        <thead>
+          <tr><th>정보</th><th>사용 목적</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>광고 식별자 (IDFA)</td><td>사용자에게 관련성 높은 광고 제공</td></tr>
+          <tr><td>디바이스 정보</td><td>앱 호환성 확인 및 광고 최적화</td></tr>
+          <tr><td>충돌 보고서</td><td>앱 오류 진단 및 안정성 개선</td></tr>
+        </tbody>
+      </table>
+      <p>본 앱은 위에 명시된 목적 외 다른 용도로 정보를 사용하지 않습니다.</p>
+
+      <h2>3. 제3자 서비스</h2>
+      <p>본 앱은 다음 제3자 서비스를 사용합니다. 각 서비스의 개인정보 처리방침은 아래 링크에서 확인하실 수 있습니다.</p>
+      <ul>
+        <li><strong>Google AdMob</strong>: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+        <li><strong>Google Firebase</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+        <li><strong>Apple SKAdNetwork</strong>: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+      </ul>
+
+      <h2>4. 정보 보관 및 파기</h2>
+      <p>본 앱은 사용자 정보를 자체 서버에 저장하지 않습니다. 제3자 서비스(Google)를 통해 수집된 정보는 해당 서비스의 정책에 따라 보관·파기됩니다.</p>
+
+      <h2>5. 사용자 권리</h2>
+      <h3>5-1. 앱 추적 권한 (App Tracking Transparency)</h3>
+      <p>iOS 14 이상 기기에서는 광고 식별자(IDFA) 사용 여부를 직접 결정하실 수 있습니다.</p>
+      <ul>
+        <li>앱 첫 실행 시 표시되는 추적 권한 다이얼로그에서 허용 여부 선택</li>
+        <li>언제든지 변경 가능: <strong>iOS 설정 → 개인정보 보호 → 추적</strong> 에서 본 앱의 토글 조정</li>
+      </ul>
+
+      <h3>5-2. 광고 개인화 거부</h3>
+      <p>추적 권한을 거부하시면 비개인화 광고가 표시되며, 모든 게임 기능은 동일하게 이용하실 수 있습니다.</p>
+
+      <h3>5-3. 앱 삭제</h3>
+      <p>앱을 삭제하시면 디바이스 내 모든 앱 데이터가 함께 삭제됩니다.</p>
+
+      <h2>6. 아동의 개인정보 보호</h2>
+      <p>본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 보호자께서 자녀가 본 앱에 정보를 제공했다고 판단되시면 아래 이메일로 연락 주시기 바랍니다.</p>
+
+      <h2>7. 처리방침 변경</h2>
+      <p>본 처리방침은 법령, 정책 또는 서비스 변경에 따라 개정될 수 있습니다. 개정 시 본 페이지에 변경 내용을 게시합니다.</p>
+
+      <h2>8. 문의</h2>
+      <p>개인정보 처리방침과 관련한 문의는 아래 이메일로 보내주세요.</p>
+      <p>
+        <strong>이메일</strong>: <a href="mailto:support@example.com">support@example.com</a><br />
+        <strong>개발자</strong>: ilho Park
+      </p>
+
+      <h2>9. 적용 범위</h2>
+      <p>본 처리방침은 App Store에서 배포되는 복불복 게임(번들 ID: <code>com.ian.randomgame</code>) 앱에 적용됩니다.</p>
+    </div>
+
+    <!-- ============ English ============ -->
+    <div data-lang="en">
+      <p>Random Game ("the App") respects your privacy. This policy explains what information is collected, how it is used, and your rights regarding that information.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>The App <strong>does not directly collect any personally identifiable information</strong> such as your name, email, or phone number. However, the following data may be automatically collected through third-party services (Google AdMob, Firebase).</p>
+
+      <h3>1-1. Google AdMob (Advertising)</h3>
+      <ul>
+        <li>Advertising Identifier (IDFA) — only if you grant tracking permission</li>
+        <li>General device information such as model, OS version, and screen size</li>
+        <li>Approximate location based on IP address (country/region level)</li>
+        <li>Ad impression and click data</li>
+      </ul>
+
+      <h3>1-2. Firebase Crashlytics (Stability)</h3>
+      <ul>
+        <li>Stack traces and error logs when the App crashes</li>
+        <li>Device model, OS version, and app version</li>
+        <li>Anonymous installation ID</li>
+      </ul>
+
+      <h2>2. Purpose of Data Collection</h2>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Advertising ID (IDFA)</td><td>Showing relevant, personalized ads</td></tr>
+          <tr><td>Device information</td><td>Compatibility checks and ad optimization</td></tr>
+          <tr><td>Crash reports</td><td>Diagnosing errors and improving stability</td></tr>
+        </tbody>
+      </table>
+      <p>We do not use the collected information for any purpose other than those stated above.</p>
+
+      <h2>3. Third-Party Services</h2>
+      <p>The App uses the following third-party services. Their privacy policies can be reviewed at the links below.</p>
+      <ul>
+        <li><strong>Google AdMob</strong>: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+        <li><strong>Google Firebase</strong>: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+        <li><strong>Apple SKAdNetwork</strong>: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
+      </ul>
+
+      <h2>4. Data Retention</h2>
+      <p>The App does not store any user data on its own servers. Data collected by third-party services is retained and deleted according to those services' policies.</p>
+
+      <h2>5. Your Rights</h2>
+      <h3>5-1. App Tracking Transparency</h3>
+      <p>On iOS 14 and later, you can choose whether the App uses your Advertising Identifier (IDFA).</p>
+      <ul>
+        <li>A permission dialog appears on first launch.</li>
+        <li>You can change this anytime: <strong>iOS Settings → Privacy &amp; Security → Tracking</strong> → toggle for this app.</li>
+      </ul>
+
+      <h3>5-2. Opt Out of Personalized Ads</h3>
+      <p>If you decline tracking permission, you will see non-personalized ads. All game features remain fully available.</p>
+
+      <h3>5-3. App Deletion</h3>
+      <p>Deleting the App will remove all app data stored on your device.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>The App is not directed to children under 13, and we do not knowingly collect personal information from children. If you believe your child has provided information through the App, please contact us at the email below.</p>
+
+      <h2>7. Changes to This Policy</h2>
+      <p>This policy may be updated to reflect changes in law, policy, or service. Updates will be posted on this page.</p>
+
+      <h2>8. Contact</h2>
+      <p>For questions about this Privacy Policy, please contact:</p>
+      <p>
+        <strong>Email</strong>: <a href="mailto:support@example.com">support@example.com</a><br />
+        <strong>Developer</strong>: ilho Park
+      </p>
+
+      <h2>9. Scope</h2>
+      <p>This Privacy Policy applies to the Random Game app (Bundle ID: <code>com.ian.randomgame</code>) distributed on the App Store.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 ilho Park. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      let lang;
+      if (saved === 'ko' || saved === 'en') {
+        lang = saved;
+      } else {
+        lang = (navigator.language || 'ko').toLowerCase().startsWith('ko') ? 'ko' : 'en';
+      }
+      if (lang === 'en') setLang('en');
+    })();
+  </script>
+</body>
+</html>
