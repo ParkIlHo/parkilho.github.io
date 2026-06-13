@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DayDoku Sudoku — 앱 지원 / Support</title>
+<style>
+  :root {
+    --indigo: #3F51B5;
+    --indigo-light: #E8EAF6;
+    --amber: #FFB300;
+    --text: #1f2235;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #ffffff;
+    --surface: #f8f9fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard",
+      Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 10;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--indigo);
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--indigo);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+  }
+  .lang-switch {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px;
+    background: #fff;
+  }
+  .lang-switch button {
+    border: 0;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .lang-switch button.active {
+    background: var(--indigo);
+    color: white;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 22px 80px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 8px 0 4px;
+  }
+  h2 {
+    font-size: 18px;
+    margin: 32px 0 8px;
+    color: var(--indigo);
+  }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+  details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 8px 0;
+  }
+  details[open] { background: #fff; }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    color: var(--indigo);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  details[open] summary::after { content: '−'; }
+  .contact-card {
+    background: var(--indigo-light);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .contact-card a {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--indigo);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  a { color: var(--indigo); }
+  .footer-nav {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  [lang-ko] .lang-en { display: none; }
+  [lang-en] .lang-ko { display: none; }
+</style>
+</head>
+<body lang-ko>
+
+<header>
+  <div class="brand">
+    <span class="brand-mark">1</span>
+    <span>DayDoku</span>
+  </div>
+  <div class="lang-switch" role="tablist" aria-label="Language">
+    <button id="btn-ko" class="active" type="button">한국어</button>
+    <button id="btn-en" type="button">English</button>
+  </div>
+</header>
+
+<main>
+  <!-- ============= 한국어 ============= -->
+  <section class="lang-ko">
+    <h1>앱 지원</h1>
+    <p class="meta">DayDoku — 매일 한 판씩 가볍게 즐기는 스도쿠 게임</p>
+
+    <div class="contact-card">
+      <strong>도움이 필요하신가요?</strong>
+      <p style="margin: 6px 0 0;">아래 자주 묻는 질문을 먼저 확인해 보시고,
+        해결되지 않는다면 이메일로 문의해 주세요.</p>
+      <a href="mailto:xhdqkq15@gmail.com?subject=DayDoku%20%EB%AC%B8%EC%9D%98">
+        xhdqkq15@gmail.com 으로 문의하기
+      </a>
+    </div>
+
+    <h2>자주 묻는 질문</h2>
+
+    <details>
+      <summary>스도쿠 규칙과 조작 방법이 궁금해요</summary>
+      <p>앱 우측 상단의 <b>도움말(❓)</b> 버튼을 누르면 9×9 보드의 규칙,
+        조작 방법, DayDoku만의 보상 시스템, 초보자 팁을 한 화면에서 확인할
+        수 있어요. 첫 실행 시에는 자동으로 한 번 표시됩니다.</p>
+    </details>
+
+    <details>
+      <summary>게임 데이터는 어디에 저장되나요?</summary>
+      <p>모든 게임 기록과 설정은 사용자의 <b>기기 내부에만</b> 저장됩니다.
+        앱이 서버나 클라우드로 데이터를 전송하지 않기 때문에 인터넷 없이
+        오프라인에서도 정상 작동합니다.</p>
+    </details>
+
+    <details>
+      <summary>다른 기기로 진행 기록을 옮길 수 있나요?</summary>
+      <p>현재 버전은 로컬 저장만 지원하므로 기기 간 자동 동기화가 되지
+        않습니다. 향후 사용자 규모가 커지면 클라우드 동기화 기능 도입을
+        검토할 예정입니다.</p>
+    </details>
+
+    <details>
+      <summary>연속 출석(스트릭)이 어떻게 동작하나요?</summary>
+      <p>매일 <b>오늘의 챌린지</b>를 완료하면 출석으로 기록됩니다. 하루라도
+        빠지면 스트릭이 처음(1일)부터 다시 시작돼요. 연속 일수가 3·7·14·30·
+        60·100일에 도달할 때마다 게임당 실수 허용 횟수와 힌트가 늘어납니다
+        (최대 6/6). 자세한 보상표는 앱 도움말의 "DayDoku만의 시스템"에서
+        확인할 수 있어요.</p>
+    </details>
+
+    <details>
+      <summary>이어하기는 어떻게 동작하나요?</summary>
+      <p>오늘의 챌린지와 자유 모드는 <b>각자 별도 슬롯</b>으로 저장됩니다.
+        한 모드를 진행 중에 다른 모드를 시작해도 진행이 보존되며, 홈 화면
+        카드에서 각각 이어할 수 있습니다.</p>
+    </details>
+
+    <details>
+      <summary>틀린 숫자를 입력하면 어떻게 되나요?</summary>
+      <p>오답은 빨간색으로 표시되며 실수 횟수가 1 증가합니다. 실수 허용
+        횟수(기본 3회)를 모두 사용하면 게임 오버예요. 빨간 숫자는 지우개로
+        지울 수 있고, 되돌리기 버튼을 누르면 가장 최근 오답이 사라집니다
+        (다시 실행으로는 되살아나지 않아요).</p>
+    </details>
+
+    <details>
+      <summary>알림이 오지 않아요</summary>
+      <p>1) 앱 내 <b>설정 → 데일리 챌린지 리마인더</b>가 켜져 있는지 확인해
+        주세요. 2) 시스템 설정에서 DayDoku의 알림 권한이 허용되어 있는지
+        확인해 주세요(iOS: 설정 → 알림, Android: 설정 → 앱 → DayDoku → 알림).
+        3) 오늘의 챌린지를 이미 완료했다면 오늘의 알림은 자동으로 건너뜁니다
+        (내일부터 다시 정상).</p>
+    </details>
+
+    <details>
+      <summary>광고를 제거할 수 있나요?</summary>
+      <p>현재 버전은 무료 운영을 위해 하단 배너 광고를 표시합니다. 광고는
+        게임 플레이 중에는 노출되지 않아 몰입을 보호합니다. 광고 제거를
+        위한 결제 옵션은 추후 검토 중입니다.</p>
+    </details>
+
+    <details>
+      <summary>다크 모드가 지원되나요?</summary>
+      <p>네. 설정 화면에서 시스템 설정을 따르거나, 라이트/다크를 명시적으로
+        선택할 수 있습니다.</p>
+    </details>
+
+    <details>
+      <summary>언어를 바꾸고 싶어요</summary>
+      <p>설정 → 언어에서 한국어/영어/시스템 설정 중 선택할 수 있습니다.
+        변경 즉시 앱 전체에 적용됩니다.</p>
+    </details>
+
+    <h2>버그 신고 및 기능 제안</h2>
+    <p>
+      앱 사용 중 문제를 겪으셨거나 새 기능을 제안하고 싶으시다면 아래
+      이메일로 다음 정보를 함께 보내주시면 빠르게 확인할 수 있습니다.
+    </p>
+    <ul>
+      <li>사용 중인 기기와 OS 버전 (예: iPhone 15, iOS 18.2)</li>
+      <li>앱 버전 (설정 화면 하단 또는 스토어에서 확인 가능)</li>
+      <li>문제가 발생한 상황과 재현 방법</li>
+      <li>가능하면 화면 캡처</li>
+    </ul>
+    <p>이메일: <a href="mailto:xhdqkq15@gmail.com">xhdqkq15@gmail.com</a></p>
+
+    <div class="footer-nav">
+      <a href="./privacy.html">← 개인정보 처리방침 / Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- ============= English ============= -->
+  <section class="lang-en">
+    <h1>App Support</h1>
+    <p class="meta">DayDoku — a daily sudoku puzzle game</p>
+
+    <div class="contact-card">
+      <strong>Need help?</strong>
+      <p style="margin: 6px 0 0;">Please check the FAQ below first. If your
+        question isn't answered there, send us an email.</p>
+      <a href="mailto:xhdqkq15@gmail.com?subject=DayDoku%20Support">
+        Contact xhdqkq15@gmail.com
+      </a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How do I learn the rules and controls?</summary>
+      <p>Tap the <b>Help (❓)</b> button in the top right corner. You'll
+        find the rules of the 9×9 board, controls, DayDoku's reward system,
+        and tips for beginners — all on one screen. The help screen is also
+        shown automatically on first launch.</p>
+    </details>
+
+    <details>
+      <summary>Where is my game data stored?</summary>
+      <p>All game records and settings live only <b>on your device</b>. The
+        app never sends them to a server or the cloud, so it works fully
+        offline.</p>
+    </details>
+
+    <details>
+      <summary>Can I move my progress to another device?</summary>
+      <p>The current version only supports local storage, so progress does
+        not sync across devices. Cloud sync may be added in a future
+        update.</p>
+    </details>
+
+    <details>
+      <summary>How does the daily streak work?</summary>
+      <p>Completing the <b>Today's Challenge</b> counts as one day of
+        attendance. If you miss a day, the streak resets to 1. When your
+        streak reaches 3, 7, 14, 30, 60, or 100 days, you earn extra
+        allowed mistakes and hints per game (up to 6/6). See the full table
+        under "What Makes DayDoku Different" in the in-app Help.</p>
+    </details>
+
+    <details>
+      <summary>How does "Continue" work?</summary>
+      <p>Today's Challenge and Free Mode are saved in <b>separate slots</b>.
+        Starting one mode never overwrites the other — you can continue
+        either one from the home screen.</p>
+    </details>
+
+    <details>
+      <summary>What happens when I enter a wrong number?</summary>
+      <p>Wrong numbers appear in red and increase your mistake counter by
+        one. If you use up all allowed mistakes (3 by default), the game
+        ends. You can clear red numbers with the eraser; pressing Undo
+        removes your most recent wrong entry (Redo never brings it back).</p>
+    </details>
+
+    <details>
+      <summary>I'm not receiving notifications</summary>
+      <p>1) Check that <b>Settings → Daily Challenge Reminder</b> is on in
+        the app. 2) Make sure DayDoku has notification permission in your
+        system settings (iOS: Settings → Notifications; Android: Settings →
+        Apps → DayDoku → Notifications). 3) If you've already completed
+        Today's Challenge, today's notification is intentionally skipped —
+        it will resume tomorrow.</p>
+    </details>
+
+    <details>
+      <summary>Can I remove ads?</summary>
+      <p>The current version shows a small bottom banner to support free
+        development. Ads are never shown during gameplay to protect focus.
+        A paid ad-removal option may be added later.</p>
+    </details>
+
+    <details>
+      <summary>Does the app support dark mode?</summary>
+      <p>Yes. In Settings you can follow the system theme or explicitly
+        pick Light or Dark.</p>
+    </details>
+
+    <details>
+      <summary>How do I change the language?</summary>
+      <p>Go to Settings → Language and pick Korean, English, or System
+        default. The change is applied across the app immediately.</p>
+    </details>
+
+    <h2>Bug Reports & Feature Requests</h2>
+    <p>
+      If you ran into a problem or want to suggest a feature, please email
+      us with the following details so we can investigate quickly.
+    </p>
+    <ul>
+      <li>Device and OS version (e.g., iPhone 15, iOS 18.2)</li>
+      <li>App version (visible at the bottom of Settings or in the store)</li>
+      <li>Steps to reproduce the issue</li>
+      <li>A screenshot if possible</li>
+    </ul>
+    <p>Email: <a href="mailto:xhdqkq15@gmail.com">xhdqkq15@gmail.com</a></p>
+
+    <div class="footer-nav">
+      <a href="./privacy.html">← Privacy Policy</a>
+    </div>
+  </section>
+</main>
+
+<script>
+(function() {
+  const html = document.documentElement;
+  const body = document.body;
+  const btnKo = document.getElementById('btn-ko');
+  const btnEn = document.getElementById('btn-en');
+
+  function apply(lang) {
+    if (lang !== 'ko' && lang !== 'en') lang = 'ko';
+    html.lang = lang;
+    body.removeAttribute('lang-ko');
+    body.removeAttribute('lang-en');
+    body.setAttribute('lang-' + lang, '');
+    btnKo.classList.toggle('active', lang === 'ko');
+    btnEn.classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('daydoku.lang', lang); } catch (_) {}
+  }
+
+  let initial = null;
+  try { initial = localStorage.getItem('daydoku.lang'); } catch (_) {}
+  if (!initial) {
+    initial = (navigator.language || 'ko').toLowerCase().startsWith('ko')
+      ? 'ko' : 'en';
+  }
+  apply(initial);
+
+  btnKo.addEventListener('click', () => apply('ko'));
+  btnEn.addEventListener('click', () => apply('en'));
+})();
+</script>
+</body>
+</html>
